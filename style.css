@@ -2,6 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    min-height: 0;
+    min-width: 0;
 }
 
 html, body, .top-con {
@@ -17,14 +19,23 @@ li {
     list-style: none;
 }
 
+.center {
+    place-items: center;
+}
+
 .top-con {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template: 1fr / 1fr 4fr;
 }
 
 .sidebar {
     display: grid;
-    grid-template-rows: 100px 1fr;
+    grid-template: 100px 1fr / 1fr;
+}
+
+.dashboard {
+    display: flex;
+    padding: 15px;
 }
 
 .nav {
@@ -36,32 +47,49 @@ li {
 
 .main {
     display: grid;
-    grid-template-rows: 200px 1fr;
+    grid-template: 200px 1fr / 1fr;
 }
 
 .header {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template: 1fr 1fr / 1fr;
+    padding-left: 20px;
 }
 
 .h-top, .h-bottom {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template: 1fr / 2fr 1fr;
+}
+
+.searchbar {
+    display: flex;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.hi {
+    display: flex;
+    gap: 10px;
 }
 
 .actions {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template: 1fr / repeat(3, 1fr);
 }
 
 .content {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template: 1fr / 3fr 1fr;
 }
 
 .content-left {
     display: grid;
-    grid-template-rows: 50px 1fr;
+    grid-template: 50px 1fr / 1fr;
+    padding-bottom: 50px;
 }
 
 .main-content {
@@ -71,13 +99,52 @@ li {
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
 }
 
+.article {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.article-action {
+    margin-top: auto;
+    align-self: flex-end;
+}
+
 .side-content {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template: 1fr 1fr / 1fr;
+    padding-bottom: 50px;
 }
 
 .side-article {
     display: grid;
-    grid-template-rows: 50px 1fr;
+    grid-template: 50px 1fr / 1fr;
     padding: 0 0 15px 0;
+}
+
+.announcements {
+    display: grid;
+    grid-template: repeat(3, 1fr) / 1fr;
+}
+
+.announcements > div {
+    padding: 15px;
+}
+
+.announcements > div > p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.trending {
+    display: grid;
+    grid-template: repeat(4, 1fr) / 1fr;
+}
+
+.trending > div {
+    display: flex;
+    gap: 10px;
+    padding: 5px;
 }
