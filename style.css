@@ -6,14 +6,20 @@
     min-width: 0;
 }
 
+:root {
+    --accent-color: #919191;
+    --background-color: #f1f1f1;
+    --shadow-color: #c7c7c7;
+}
+
 html, body, .top-con {
     width: 100%;
     height: 100vh;
 }
 
-div {
+/*div {
     border: solid 2px black;
-}
+}*/
 
 li {
     list-style: none;
@@ -21,6 +27,17 @@ li {
 
 .center {
     place-items: center;
+}
+
+.article-shadow {
+    border-radius: 8px;
+    box-shadow: 2px 4px 4px var(--shadow-color);
+    border-left: 8px solid #bbbbbb ;
+}
+
+.side-article-shadow {
+    border-radius: 8px;
+    box-shadow: 2px 4px 4px var(--shadow-color);
 }
 
 .top-con {
@@ -31,11 +48,17 @@ li {
 .sidebar {
     display: grid;
     grid-template: 100px 1fr / 1fr;
+    background-color: var(--accent-color);
+}
+
+.sidebar li {
+    color: white;
 }
 
 .dashboard {
     display: flex;
     padding: 15px;
+    color: white;
 }
 
 .nav {
@@ -54,6 +77,8 @@ li {
     display: grid;
     grid-template: 1fr 1fr / 1fr;
     padding-left: 20px;
+    box-shadow: 0 4px 4px var(--shadow-color);
+    z-index: 1;
 }
 
 .h-top, .h-bottom {
@@ -84,12 +109,18 @@ li {
 .content {
     display: grid;
     grid-template: 1fr / 3fr 1fr;
+    background-color: var(--background-color);
 }
 
 .content-left {
     display: grid;
     grid-template: 50px 1fr / 1fr;
     padding-bottom: 50px;
+}
+
+.content-left > h3 {
+    margin-top: auto;
+    margin-left: 15px;
 }
 
 .main-content {
@@ -103,6 +134,7 @@ li {
     display: flex;
     flex-direction: column;
     padding: 15px;
+    background-color: white;
 }
 
 .article-action {
@@ -114,6 +146,8 @@ li {
     display: grid;
     grid-template: 1fr 1fr / 1fr;
     padding-bottom: 50px;
+    padding-right: 15px;
+    padding-top: 15px;
 }
 
 .side-article {
@@ -122,9 +156,15 @@ li {
     padding: 0 0 15px 0;
 }
 
+.side-article > h3 {
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
 .announcements {
     display: grid;
     grid-template: repeat(3, 1fr) / 1fr;
+    background-color: white;
 }
 
 .announcements > div {
@@ -141,6 +181,7 @@ li {
 .trending {
     display: grid;
     grid-template: repeat(4, 1fr) / 1fr;
+    background-color: white;
 }
 
 .trending > div {
