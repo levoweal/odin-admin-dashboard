@@ -120,22 +120,80 @@ h3 {
 
 .searchbar {
     display: flex;
+    gap: 0.5em;
+    padding: 15px;
+}
+
+.searchbar input {
+    flex: 1;
+    background-color: var(--background-color);
+    height: 2.2em;
+    border: 1px solid var(--accent-color);
+    border-radius: 2em;
+}
+
+.h-top svg {
+    width: 2em;
+    height: auto;
 }
 
 .login {
     display: flex;
     justify-content: center;
-    gap: 5px;
+    gap: 25px;
+    padding: 20px 15px;
+}
+
+.login p {
+    font-size: 1.5em;
+    font-weight: 600;
 }
 
 .hi {
     display: flex;
-    gap: 10px;
+    gap: 20px;
+    padding: 15px;
+}
+
+.hi-text > p:first-child {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.hi-text > p:last-child {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.avatar {
+    background-color: var(--background-color);
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar > img {
+    height: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .actions {
     display: grid;
     grid-template: 1fr / repeat(3, 1fr);
+}
+
+.actions button {
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: 600;
+    font-size: 1.1em;
 }
 
 .content {
@@ -214,10 +272,11 @@ h3 {
     display: grid;
     grid-template: repeat(4, 1fr) / 1fr;
     background-color: white;
+    padding: 15px;
+    gap: 15px;
 }
 
 .trending > div {
     display: flex;
     gap: 10px;
-    padding: 5px;
 }
