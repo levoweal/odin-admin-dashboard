@@ -200,55 +200,60 @@ h3 {
     display: grid;
     grid-template: 1fr / 3fr 1fr;
     background-color: var(--background-color);
+    gap: 30px;
+    padding: 15px 30px 50px;
 }
 
 .content-left {
     display: grid;
     grid-template: 50px 1fr / 1fr;
-    padding-bottom: 50px;
+    gap: 15px;
 }
 
 .content-left > h3 {
     margin-top: auto;
-    margin-left: 15px;
 }
 
 .main-content {
-    padding: 15px;
     display: grid;
-    gap: 15px;
-    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 30px;
+    grid-template-rows: repeat(3, minmax(min-content, 1fr));
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
 }
 
 .article {
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 20px;
     background-color: white;
 }
 
 .article-action {
     margin-top: auto;
     align-self: flex-end;
+    display: flex;
+    gap: 1.4em;
+}
+
+.article-action>svg {
+    width: 1.6em;
+    height: auto;
 }
 
 .side-content {
     display: grid;
     grid-template: 1fr 1fr / 1fr;
-    padding-bottom: 50px;
-    padding-right: 15px;
-    padding-top: 15px;
+    gap: 15px;
 }
 
 .side-article {
     display: grid;
     grid-template: 50px 1fr / 1fr;
-    padding: 0 0 15px 0;
+    gap: 15px;
 }
 
 .side-article > h3 {
     margin-top: auto;
-    margin-bottom: 15px;
 }
 
 .announcements {
